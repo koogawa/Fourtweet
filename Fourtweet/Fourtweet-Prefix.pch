@@ -1,0 +1,33 @@
+//
+// Prefix header for all source files of the 'Fourtweet' target in the 'Fourtweet' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define CLIENT_ID			@"YOUR_CLIENT_ID"
+#define CLIENT_SECRET		@"YOUR_CLIENT_SECRET"
+
+#define TWEET_MAX_LEN		140
+
+#define STATUS_BAR_HEIGHT	20.0f
+#define NAVI_VAR_HEIGHT     44.0f
+#define TAB_BAR_HEIGHT		50.0f
+
+#define THEME_COLOR			[UIColor colorWithRed:0.05 green:0.56 blue:0.71 alpha:1.0]
+
+#ifdef DEBUG
+# define LOG(...) NSLog(__VA_ARGS__)
+# define LOG_CURRENT_METHOD NSLog(@"%s", __func__)
+#else
+# define LOG(...) ;
+# define LOG_CURRENT_METHOD ;
+#endif
